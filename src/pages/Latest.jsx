@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react"
-
-const latestUrl = import.meta.env.VITE_LATEST
-const apiKey = import.meta.env.VITE_API_KEY 
+import MovieCard from "../components/MovieCard"
 
 import './MovieGrid.css'
 
-import MovieCard from "../components/MovieCard"
+const moviesURL = import.meta.env.VITE_API
+const apiKey = import.meta.env.VITE_API_KEY 
 
 const Latest = () => {
     const [latest, setLatest] = useState([])
@@ -18,7 +17,7 @@ const Latest = () => {
     }
 
     useEffect(() => {
-        const latestMoviesUrl = `${latestUrl}?${apiKey}`
+        const latestMoviesUrl = `${moviesURL}/now_playing?${apiKey}`
         getLatest(latestMoviesUrl)
     }, [])
 

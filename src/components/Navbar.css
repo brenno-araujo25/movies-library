@@ -42,25 +42,23 @@ a:hover {
     align-items: center;
 }
 
-#navbar .buttons button {
+#navbar .button-link {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
     background-color: #3572EF;
+    color:#000;
     border: 2px solid #3572EF;
     border-radius: 4px;
     padding: .3rem .7rem;
     font-size: 1rem;
-    cursor: pointer;
     width: 9rem;
-    a {
-        color: #000;
-    }
     transition: .5s;
 }
 
-#navbar .buttons button:hover {
+#navbar .button-link:hover {
     background-color: transparent;
-    a {
-        color: #3572EF;
-    }
+    color: #3572EF;
 }
 
 #navbar form button {
@@ -93,15 +91,15 @@ a:hover {
         margin: 10px;
     }
 
+    #navbar .button-link {
+        width: 100%;
+    }
+
     #navbar .buttons {
         width: 100%;
         flex-direction: column;
         gap: 10px;
         margin-bottom: 20px;
-    }
-
-    #navbar .buttons button {
-        width: 100%;
     }
 
     #navbar form {

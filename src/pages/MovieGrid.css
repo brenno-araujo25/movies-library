@@ -63,7 +63,21 @@
 }
 
 @media (max-width: 768px) {
+    .movies-container div {
+        width: 48%;
+    }
+
     .movies-container div h2 {
+        font-size: 1rem;
+    }
+
+    .movies-container div a {
+        justify-content: center;
+        width: 100%;
+        padding: .6rem;
+    }
+
+    .movies-container div p {
         font-size: 1rem;
     }
 }

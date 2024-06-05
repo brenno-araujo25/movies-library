@@ -25,22 +25,22 @@ const Navbar = () => {
     <nav id='navbar'>
       <div className="buttons">
         <h2>
-        <Link to='/'><RiMovie2Fill /> Movies Library</Link>
+          <Link to='/'><RiMovie2Fill /> Movies Library</Link>
         </h2>
 
-          <button>
-            <Link to='latest'>Latest</Link>
-          </button>
+        <Link to='latest' className='button-link'>
+          Lançamentos
+        </Link>
 
-          <button>
-            <Link to='popular'>Popular</Link>
-          </button>
+        <Link to='popular' className="button-link">
+          Populares
+        </Link>
 
-          <button>
-            <Link to='upcoming'>Upcoming</Link>
-          </button>
+        <Link to='upcoming' className="button-link">
+          Em Breve
+        </Link>
 
-        </div>
+      </div>
 
         <form onSubmit={handleSubmit}>
             <input

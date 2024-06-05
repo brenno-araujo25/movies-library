@@ -3,7 +3,7 @@ import MovieCard from "../components/MovieCard"
 
 import './MovieGrid.css'
 
-const upComingURL = import.meta.env.VITE_UPCOMING
+const moviesURL = import.meta.env.VITE_API
 const apiKey = import.meta.env.VITE_API_KEY
 
 const Upcoming = () => {
@@ -17,14 +17,14 @@ const Upcoming = () => {
     }
 
     useEffect(() => {
-        const upComingMoviesURL = `${upComingURL}?${apiKey}`
+        const upComingMoviesURL = `${moviesURL}/upcoming?${apiKey}`
         getUpComing(upComingMoviesURL)
     }, [])
 
     return (
         <div className="container">
             <h2 className="title">
-                Upcoming:
+                Próximos lançamentos:
             </h2>
 
             <div className="movies-container">

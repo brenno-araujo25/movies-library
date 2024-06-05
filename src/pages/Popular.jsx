@@ -3,7 +3,7 @@ import MovieCard from "../components/MovieCard"
 
 import './MovieGrid.css'
 
-const popularUrl = import.meta.env.VITE_POPULAR
+const moviesURL = import.meta.env.VITE_API
 const apiKey = import.meta.env.VITE_API_KEY
 
 const Popular = () => {
@@ -17,13 +17,13 @@ const Popular = () => {
     }
 
     useEffect(() => {
-        const popularMoviesUrl = `${popularUrl}?${apiKey}`
+        const popularMoviesUrl = `${moviesURL}/popular?${apiKey}`
         getPopular(popularMoviesUrl)
     }, [])
 
     return (
         <div className="container">
-            <h2 className="title">Popular:</h2>
+            <h2 className="title">Populares:</h2>
             <div className="movies-container">
                 {popular.length === 0 && <p>Carregando...</p>}
                 {popular.length > 0 && popular.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
