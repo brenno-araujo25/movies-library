@@ -68,3 +68,23 @@
 .description p {
     line-height: 1.4rem;
 }
+
+@media (max-width: 768px) {
+    .movie-page .movie-card img {
+        max-width: 80%;
+    }
+
+    .movie-page .movie-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+        padding: 0 2rem;
+    }
+
+    .movie-page .info {
+        padding: 0 3rem;
+        
+    }
+}
